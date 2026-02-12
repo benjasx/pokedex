@@ -1,3 +1,7 @@
+import { setServers } from 'node:dns/promises';
+
+// Forzar servidores DNS explícitamente antes de conectar
+setServers(['1.1.1.1', '8.8.8.8']);
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { ValidationPipe } from '@nestjs/common';
